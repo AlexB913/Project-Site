@@ -1,0 +1,33 @@
+/*Imports*/
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+/* Application */
+.todo-container {
+  width: 500px;
+  margin: 5px auto;
+  margin-top: 10px;
+}
+
+.add-todo-container {
+  margin-bottom: 10px;
+}
+
+.add-todo-container .col-md-10 {
+  padding-left: 0;
+}
+
+.add-todo-container .col-md-2 {
+  padding-right: 0;
+  text-align: right;
+}
+
+#title {
+  margin: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
