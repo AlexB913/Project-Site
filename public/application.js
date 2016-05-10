@@ -62,8 +62,28 @@
 	
 	var _pagesProject2 = _interopRequireDefault(_pagesProject);
 	
+	var _pagesExtra = __webpack_require__(54);
+	
+	var _pagesExtra2 = _interopRequireDefault(_pagesExtra);
+	
 	(0, _jquery2['default'])(function () {
-		_pagesTodo2['default'].init();
+	
+		// what page are we on?
+		var url = window.location.pathname;
+	
+		// our first javascript router
+	
+		switch (url) {
+			case '/pages/todo.html':
+				_pagesTodo2['default'].init();
+				break;
+			case '/pages/project.html':
+				// init project javascript
+				break;
+			case '/pages/extra.html':
+				// init extra javascript
+				break;
+		}
 	});
 
 /***/ },
@@ -19175,6 +19195,15 @@
 /***/ },
 /* 52 */,
 /* 53 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var app = {};
+	module.exports = app;
+
+/***/ },
+/* 54 */
 /***/ function(module, exports) {
 
 	"use strict";

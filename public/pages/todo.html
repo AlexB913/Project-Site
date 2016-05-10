@@ -30,6 +30,9 @@
    <li class="list-group-item row {{#if completed}}disabled{{/if}}">
      <div class="col-md-1"><input type="checkbox" {{#if completed}}checked{{/if}}></div>
      <div class="col-md-10">{{title}}</div>
+     <div class="col-md-10 hidden">
+       <input type="text" class="form-control" value="{{title}}"></input>
+     </div>
      <div class="col-md-1"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
    </li>
 </script>
