@@ -1,0 +1,46 @@
+
+h1 {
+  color: red;
+}
+.square {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  line-height: 100px;
+  font-family: arial;
+  font-size: 42px;
+  transform: none;
+  transition: transform .5s;
+}
+.square-container{
+  perspective: 50px;
+  display: inline-block;
+}
+.square1:hover {
+  transform: skewX(45deg);
+  background-color: #63A1F2;
+  opacity: .5;
+}
+.square2:hover {
+  transform: skewX(145deg);
+  background-color: red;
+  opacity: .5;
+}
+.square3:hover {
+  transform: scale(.8,.5);
+}
+.square4:hover {
+  transform: rotateX(45deg) rotateY(745deg);
+  transition: transform .5s;
+  background-color: #EEE;
+}
+.square5:hover {
+  -webkit-transform: rotateX(45deg);
+  transform: rotateX(45deg);
+  transition: transform .5s;
+}
+.square6:hover {
+  transform: translate3d(20px, 50px, -100px);
+}

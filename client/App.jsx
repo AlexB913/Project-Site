@@ -4,6 +4,7 @@ import 'styles/main.scss';
 import todos from 'pages/todo';
 import project from 'pages/project';
 import extra from 'pages/extra';
+import funnySquares from 'pages/funnySquares';
 
 $(function(){
 
@@ -21,6 +22,9 @@ $(function(){
 		break;
 		case '/pages/extra.html':
 		// init extra javascript
+		break;
+		case '/pages/funnySquares.html':
+		funnySquares.init()
 		break;
 }
 });
