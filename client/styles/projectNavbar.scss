@@ -1,0 +1,21 @@
+.menu-item {
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "Lora", serif;
+	margin: 10px;
+	margin-left: 5px;
+	text-align: center;
+	color: black;
+	border: 1px solid #EEE;
+}
+.menu-item:hover {
+	color: #999;
+	border: 1px solid black;
+	transform: scale(1.1, 1.1);
+}
+.menu-box {
+	padding: 10px;
+	height: 153px;
+	background-color: rgb(200, 200, 200);
+	z-index: -1;
+}

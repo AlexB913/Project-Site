@@ -62,35 +62,48 @@
 	
 	var _pagesProject2 = _interopRequireDefault(_pagesProject);
 	
-	var _pagesExtra = __webpack_require__(54);
+	var _pagesExtra = __webpack_require__(55);
 	
 	var _pagesExtra2 = _interopRequireDefault(_pagesExtra);
 	
-	var _pagesFunnySquares = __webpack_require__(55);
+	var _pagesFunnySquares = __webpack_require__(56);
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
+	var _componentsHeader = __webpack_require__(58);
+	
+	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
+	
+	var _componentsFooter = __webpack_require__(60);
+	
+	var _componentsFooter2 = _interopRequireDefault(_componentsFooter);
+	
 	(0, _jquery2['default'])(function () {
 	
-		// what page are we on?
-		var url = window.location.pathname;
+	   _componentsHeader2['default'].init();
+	   _componentsFooter2['default'].init();
 	
-		// our first javascript router
+	   // what page are we on?
+	   var url = window.location.pathname;
 	
-		switch (url) {
-			case '/pages/todo.html':
-				_pagesTodo2['default'].init();
-				break;
-			case '/pages/project.html':
-				// init project javascript
-				break;
-			case '/pages/extra.html':
-				// init extra javascript
-				break;
-			case '/pages/funnySquares.html':
-				_pagesFunnySquares2['default'].init();
-				break;
-		}
+	   // our first javascript router
+	
+	   switch (url) {
+	      case '/pages/todo.html':
+	         _pagesTodo2['default'].init();
+	         break;
+	      case '/pages/project.html':
+	         _pagesProject2['default'].init();
+	         break;
+	      case '/pages/extra.html':
+	         // init extra javascript
+	         break;
+	      case '/pages/funnySquares.html':
+	         _pagesFunnySquares2['default'].init();
+	         break;
+	      default:
+	      // do nothing
+	   }
 	});
 
 /***/ },
@@ -9946,7 +9959,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"todo-container":"todo-container","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","title":"title","my-project-header":"my-project-header","animated-title":"animated-title","slide":"slide","main-content":"main-content","sidebar-right":"sidebar-right","menu-item":"menu-item","menu-box":"menu-box","about":"about","contact":"contact","work":"work","region":"region","responsive-image":"responsive-image","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6"};
+	module.exports = {"todo-container":"todo-container","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","title":"title","my-project-header":"my-project-header","animated-title":"animated-title","slide":"slide","menu-thing":"menu-thing","main-content":"main-content","responsive-image":"responsive-image","project-footer":"project-footer","menu-box-bottom":"menu-box-bottom","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","soc-icon":"soc-icon","menu-item":"menu-item","menu-box":"menu-box"};
 
 /***/ },
 /* 3 */,
@@ -19239,24 +19252,49 @@
 
 /***/ },
 /* 53 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	var app = {};
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesProjectNavbarHtml = __webpack_require__(54);
+	
+	var _templatesProjectNavbarHtml2 = _interopRequireDefault(_templatesProjectNavbarHtml);
+	
+	var app = {
+	
+	  init: function init() {
+	    (0, _jquery2['default'])('menu').append(_templatesProjectNavbarHtml2['default']);
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('menu').append(_templatesProjectNavbarHtml2['default']);
+	  }
+	};
+	
 	module.exports = app;
 
 /***/ },
 /* 54 */
 /***/ function(module, exports) {
 
+	module.exports = "<div class=\"row\">\n  <div class=\"menu-box\">\n    <div class=\"col-md-3\"> \n      <nav class=\"menu-item about\">About</nav>\n    </div>\n    <div class=\"col-md-3\">\n      <nav class=\"menu-item work\">Work</nav>\n    </div>\n    <div class=\"col-md-3\">\n      <nav class=\"menu-item contact\">Contact</nav>\n    </div>\n    <div class=\"col-md-3\">\n      <nav class=\"menu-item region\">Region</nav>\n    </div>\n  </div>\n</div>";
+
+/***/ },
+/* 55 */
+/***/ function(module, exports) {
+
 	"use strict";
 	
 	var app = {};
 	module.exports = app;
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19271,9 +19309,9 @@
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
-	var _htmlTemplatesFunnySquareHtml = __webpack_require__(56);
+	var _templatesFunnySquareHtml = __webpack_require__(57);
 	
-	var _htmlTemplatesFunnySquareHtml2 = _interopRequireDefault(_htmlTemplatesFunnySquareHtml);
+	var _templatesFunnySquareHtml2 = _interopRequireDefault(_templatesFunnySquareHtml);
 	
 	var _handlebars = __webpack_require__(8);
 	
@@ -19282,7 +19320,7 @@
 	var template;
 	var app = {
 	  init: function init() {
-	    template = _handlebars2['default'].compile(_htmlTemplatesFunnySquareHtml2['default']);
+	    template = _handlebars2['default'].compile(_templatesFunnySquareHtml2['default']);
 	    app.render();
 	  },
 	  render: function render() {
@@ -19299,10 +19337,76 @@
 	module.exports = app;
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports) {
 
-	module.exports = "module.exports = \"<div class=\\\"square-container\\\">\\n  <div class=\\\"square square{{id}}\\\">\\n    <div class=\\\"inner\\\">{{id}}</div>\\n  </div>\\n</div>\";";
+	module.exports = "<div class=\"square-container\">\n  <div class=\"square square{{id}}\">\n    <div class=\"inner\">{{id}}</div>\n  </div>\n</div>";
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesNavbarHtml = __webpack_require__(59);
+	
+	var _templatesNavbarHtml2 = _interopRequireDefault(_templatesNavbarHtml);
+	
+	var app = {
+	  init: function init() {
+	    (0, _jquery2['default'])('header').append(_templatesNavbarHtml2['default']);
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('header').append(_templatesNavbarHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 59 */
+/***/ function(module, exports) {
+
+	module.exports = "<nav>\n  <div class=\"col-md-4\"><a class=\"nav-item\" role=\"menuitem\" href=\"/pages/todo.html\">Todo Application</a></div>\n  <div class=\"col-md-4\"><a class=\"nav-item\" role=\"menuitem\" href=\"/pages/project.html\">My Project</a></div>\n  <div class=\"col-md-4\"><a class=\"nav-item\" role=\"menuitem\" href=\"/pages/extra.html\">Extra</a></div>  \n  <div class=\"col-md-4\"><a class=\"nav-item\" role=\"menuitem\" href=\"/pages/funnySquares.html\">Funny Squares</div>\n</nav>";
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesSocIconsHtml = __webpack_require__(61);
+	
+	var _templatesSocIconsHtml2 = _interopRequireDefault(_templatesSocIconsHtml);
+	
+	var app = {
+	  init: function init() {
+	    (0, _jquery2['default'])('footer').append(_templatesSocIconsHtml2['default']);
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('footer').append(_templatesSocIconsHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 61 */
+/***/ function(module, exports) {
+
+	module.exports = "\n\n<div>\n\t<a href=\"https://www.facebook.com\"><img class=\"soc-icon\" src=\"https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/512/social_facebook_box_blue.png\"></a>\n\t<a href=\"https://www.linkedin.com\"><img class=\"soc-icon\" src=\"http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Linkedin-icon.png\"></a>\n\t<a href=\"https://www.twitter.com\"><img class=\"soc-icon\" src=\"http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Twitter-icon.png\"></a>\n</div>\n\n";
 
 /***/ }
 /******/ ]);

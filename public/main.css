@@ -31,18 +31,18 @@
 #my-project-header {
   margin: 10px;
   padding: 10px;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
 .animated-title {
   position: relative;
-  left: -600px;
+  left: -1600px;
   width: 350px;
-  height: 100px;
-  background: white;
-  -webkit-animation: slide 0.5s forwards;
+  height: 50px;
+  background: #c8c8c8;
+  -webkit-animation: slide 1.9s forwards;
   -webkit-animation-delay: 2s;
-  animation: slide 0.5s forwards;
+  animation: slide 1.9s forwards;
 }
 
 @-webkit-keyframes slide {
@@ -57,72 +57,33 @@
   }
 }
 
+.menu-thing {
+  margin: -15px;
+  padding: 0px;
+}
+
 .main-content {
-  background: #5a5a6f;
+  background-color: #649696;
   height: auto;
-  border-bottom: 3px solid black;
-  border-right: 2px solid black;
-  border-radius: 20%;
   overflow: hidden;
-}
-
-.sidebar-right {
-  background: #5a5a6f;
-  height: 300px;
-  border-radius: 20%;
-  border-bottom: 3px solid black;
-  bottom-right: 2px solid black;
-  overflow: hidden;
-}
-
-.menu-item {
-  font-size: 15px;
-  font-weight: bold;
-  font-family: 'Lora', serif;
-  color: white;
-  margin: 10px;
-  margin-left: 5px;
-  text-align: center;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-radius: 24%;
-}
-
-.menu-item:hover {
-  background-color: #788c8c;
-  border-bottom: 0px;
-  border-right: 0px;
-  border-left: 2px solid black;
-  border-top: 2px solid black;
-  color: #780000;
-}
-
-.menu-box {
-  background-color: #5a5a6f;
-  padding: 10px;
-  border-radius: 20%;
-  border-bottom: 3px solid black;
-  border-right: 2px solid black;
-}
-
-.about {
-  background-color: #90281e;
-}
-
-.contact {
-  background-color: #7a321e;
-}
-
-.work {
-  background-color: #642a1e;
-}
-
-.region {
-  background-color: #632c4d;
 }
 
 .responsive-image {
   width: 60%;
+}
+
+.project-footer {
+  text-align: center;
+  background-color: #999;
+}
+
+.menu-box-bottom {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/
@@ -178,6 +139,35 @@ h1 {
 
 .square6:hover {
   transform: translate3d(20px, 50px, -100px);
+}
+
+.soc-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.menu-item {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Lora", serif;
+  margin: 10px;
+  margin-left: 5px;
+  text-align: center;
+  color: black;
+  border: 1px solid #EEE;
+}
+
+.menu-item:hover {
+  color: #999;
+  border: 1px solid black;
+  transform: scale(1.1, 1.1);
+}
+
+.menu-box {
+  padding: 10px;
+  height: 153px;
+  background-color: #c8c8c8;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=main.css.map*/

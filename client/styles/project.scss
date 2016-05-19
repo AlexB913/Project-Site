@@ -1,20 +1,21 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lora);
 
+
 #my-project-header {
   margin: 10px;
   padding: 10px;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 .animated-title {
   position: relative;
-  left: -600px;
+  left: -1600px;
   width: 350px;
-  height: 100px;
-  background: white;
-  -webkit-animation: slide 0.5s forwards;
+  height: 50px;
+  background: rgb(200, 200, 200);
+  -webkit-animation: slide 1.9s forwards;
   -webkit-animation-delay: 2s;
-  animation: slide 0.5s forwards;
+  animation: slide 1.9s forwards;
 }
 @-webkit-keyframes slide {
     100% { left: 0; }
@@ -24,63 +25,34 @@
     100% { left: 0; }
 }
 
+.menu-thing {
+	margin: -15px;
+	padding: 0px;
+
+}
+
 .main-content {
-	background: rgb(90, 90, 111);
+	background-color: rgb(100, 150, 150);
 	height: auto;
-	border-bottom:3px solid black;
-	border-right:2px solid black;
-	border-radius: 20%;
 	overflow: hidden;
 }
-.sidebar-right {
-	background: rgb(90, 90, 111);
-	height: 300px;
-	border-radius: 20%;
-	border-bottom:3px solid black;
-	bottom-right:2px solid black;
-	overflow: hidden;
-}
-.menu-item {
-	font-size: 15px;
-	font-weight: bold;
-	font-family: 'Lora', serif;
-	color: rgb(255, 255, 255);
-	margin: 10px;
-	margin-left: 5px;
-	text-align: center;
-	border-bottom: 2px solid black;
-	border-right: 2px solid black;
-	border-radius: 24%;
-}
-.menu-item:hover {
-	background-color: rgb(120, 140, 140);
-	border-bottom: 0px;
-	border-right: 0px;
-	border-left: 2px solid black;
-	border-top: 2px solid black;
-	color: rgb(120, 0, 0);
-}
-.menu-box {
-	background-color: rgb(90, 90, 111);
-	padding: 10px;
-	border-radius: 20%;
-	border-bottom: 3px solid black;
-	border-right: 2px solid black;
-}
-.about {
-	background-color: rgb(144, 40, 30);
-}
-.contact {
-	background-color: rgb(122, 50, 30);
-}
-.work {
-	background-color: rgb(100, 42, 30);
-}
-.region {
-	background-color: rgb(99, 44, 77);
-}
+
 .responsive-image {
 	width:60%;
+}
+
+.project-footer {
+	text-align: center;
+	background-color: #999;
+}
+
+.menu-box-bottom {
+	display: block;
+	position: relative;
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	z-index: 0;
 }
 
 /*# sourceMappingURL=main.css.map*/
