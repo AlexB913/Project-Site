@@ -19,6 +19,7 @@ if (savedData === null) {
   todos = savedData;
 } 
 
+console.log(Math.pi);
 
 // Application 
 var template;

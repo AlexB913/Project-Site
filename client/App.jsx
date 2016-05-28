@@ -5,6 +5,7 @@ import todos from 'pages/todo';
 import project from 'pages/project';
 import extra from 'pages/extra';
 import funnySquares from 'pages/funnySquares';
+import threeExample from 'pages/3dsExample';
 import header from 'components/header';
 import footer from 'components/footer';
 
@@ -26,11 +27,13 @@ $(function(){
 	project.init();
 	break;
     case '/pages/extra.html':
-	// init extra javascript
+	extra.init();
 	break;
     case '/pages/funnySquares.html':
 	funnySquares.init();
 	break;
+    case '/pages/3dsExample.html':
+  threeExample.init();
     default:
   // do nothing
   }

@@ -25,16 +25,11 @@
     100% { left: 0; }
 }
 
-.menu-thing {
-	margin: -15px;
-	padding: 0px;
-
-}
-
-.main-content {
-	background-color: rgb(100, 150, 150);
-	height: auto;
-	overflow: hidden;
+.background {
+	position: absolute;
+	background-color: green;
+	width: 1280px;
+	height: 100%;
 }
 
 .responsive-image {
@@ -46,13 +41,5 @@
 	background-color: #999;
 }
 
-.menu-box-bottom {
-	display: block;
-	position: relative;
-	height: 20px;
-	width: 20px;
-	background-color: black;
-	z-index: 0;
-}
 
 /*# sourceMappingURL=main.css.map*/

@@ -57,15 +57,11 @@
   }
 }
 
-.menu-thing {
-  margin: -15px;
-  padding: 0px;
-}
-
-.main-content {
-  background-color: #649696;
-  height: auto;
-  overflow: hidden;
+.background {
+  position: absolute;
+  background-color: green;
+  width: 1280px;
+  height: 100%;
 }
 
 .responsive-image {
@@ -77,16 +73,42 @@
   background-color: #999;
 }
 
-.menu-box-bottom {
-  display: block;
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background-color: black;
-  z-index: 0;
+/*# sourceMappingURL=main.css.map*/
+#extra-title {
+  color: blue;
 }
 
-/*# sourceMappingURL=main.css.map*/
+.extra-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+}
+
+form {
+  position: relative;
+  top: 1em;
+  left: 1em;
+}
+
+path {
+  fill-rule: evenodd;
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+.sun path {
+  fill: #6baed6;
+}
+
+.planet path {
+  fill: #9ecae1;
+}
+
+.annulus path {
+  fill: #c6dbef;
+}
+
 h1 {
   color: red;
 }
@@ -151,9 +173,10 @@ h1 {
   font-weight: bold;
   font-family: "Lora", serif;
   margin: 10px;
-  margin-left: 5px;
+  float: left;
   text-align: center;
   color: black;
+  width: 150px;
   border: 1px solid #EEE;
 }
 
@@ -163,11 +186,22 @@ h1 {
   transform: scale(1.1, 1.1);
 }
 
-.menu-box {
-  padding: 10px;
+.menu-box-inner {
+  padding: 0px;
   height: 153px;
   background-color: #c8c8c8;
   z-index: -1;
+}
+
+.menu-box {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-content {
+  background-color: #649696;
+  overflow: hidden;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map*/

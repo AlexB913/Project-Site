@@ -1,7 +1,15 @@
-<<<<<<< HEAD
-# my-first-repo
 
-This is my first repo. Pretty cool stuff.
-=======
-# Todo-App
->>>>>>> c4d85bd077d7bcbaea18e41bb39282dfea226b5b
+About:
+
+This repo contains my DaVinci JavaScript course portfolio.
+
+See me on...
+
+[LinkedIn](https://www.linkedin.com/in/alexballoffet)
+
+[GitHub](https://github.com/AlexB913)
+
+[DaVinci Coders](https://www.davincicoders.com/)
+
+
+
