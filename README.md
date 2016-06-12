@@ -10,6 +10,3 @@ See me on...
 [GitHub](https://github.com/AlexB913)
 
 [DaVinci Coders](https://www.davincicoders.com/)
-
-
-

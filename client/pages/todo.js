@@ -9,8 +9,17 @@ import _ from 'underscore';
 import Handlebars from 'handlebars';
 import lscache from 'lscache';
 import rawTemplate from 'templates/todoItem.html';
+import modalTemplate from 'templates/todoModal.html';
 
 // Data Model
+var todoSchema = function(todo){
+  return _.defualts(todo, {
+    id: 0,
+    title: "", 
+    completed: false  
+  });
+} 
+
 var savedData = lscache.get('todos');
 var todos;
 if (savedData === null) {
@@ -18,8 +27,6 @@ if (savedData === null) {
 } else {
   todos = savedData;
 } 
-
-console.log(Math.pi);
 
 // Application 
 var template;
@@ -80,11 +87,11 @@ var app = {
      var handleEvent = function(){
        var newTodoTitle = $('.add-todo-container input').val();
        if ($.type(newTodoTitle) === 'string' && newTodoTitle.length > 2) {
-         var newTodoObject = { 
+         var newTodoObject = todoSchema({ 
           id: todos.length, 
           title: newTodoTitle, 
           completed: false
-           };
+          });
          todos.push(newTodoObject);
          $('.add-todo-container input').val('');
          app.render();
@@ -114,28 +121,49 @@ var app = {
     });
   },
   bindEditTodoEvents: function(){
+
+
+
+    $('body').append(modalTemplate);
+
     $('.title').on('click', function(){
-      var $parent = $(this).parent();
-      $parent.find('.title').addClass('hidden');
-      $parent.find('.title-edit').removeClass('hidden');
-    });
-    $('.title-edit input').on('keypress', function(event){
-      var kcode = (event.keyCode);
-      if (kcode === 13) {
-        var newTitle = $(this).val(); 
-        var editId = $(this).attr('data-id');
-        editId = parseInt(editId, 10);
-        var editTodo = _.filter(todos, function(todo){
-            if (todo.id === editId) {
-              return true; 
-            }
-            return false;
-          });
-        editTodo = editTodo[0];
-        editTodo.title = newTitle;
-        app.render();
+      var whichTodo = $(this).attr('data-id');
+      whichTodo = parseInt(whichTodo, 10);
+      var editTodo = todos[whichTodo];
+      var compiledTemplate = Handlebars.compile(modalTemplate);
+      var fullHtml = compiledTemplate(editTodo);
+
+      $('body').append(fullHtml);
+
+      $('.modal').modal();
+
+      $('.close, btn-default, .modal-backdrop').on('click'), function(){
+        $('.modal, .modal-backdrop').remove();
       }
+
     });
+
+    //   var $parent = $(this).parent();
+    //   $parent.find('.title').addClass('hidden');
+    //   $parent.find('.title-edit').removeClass('hidden');
+    // });
+    // $('.title-edit input').on('keypress', function(event){
+    //   var kcode = (event.keyCode);
+    //   if (kcode === 13) {
+    //     var newTitle = $(this).val(); 
+    //     var editId = $(this).attr('data-id');
+    //     editId = parseInt(editId, 10);
+    //     var editTodo = _.filter(todos, function(todo){
+    //         if (todo.id === editId) {
+    //           return true; 
+    //         }
+    //         return false;
+    //       });
+    //     editTodo = editTodo[0];
+    //     editTodo.title = newTitle;
+    //     app.render();
+    //  }
+    // });
   }
 };
 

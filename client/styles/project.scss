@@ -1,44 +1,29 @@
 
-@import url(https://fonts.googleapis.com/css?family=Lora);
-
-
-#my-project-header {
-  margin: 10px;
-  padding: 10px;
-  font-family: "Lora", serif;
-}
-.animated-title {
-  position: relative;
-  left: -1600px;
-  width: 350px;
-  height: 50px;
-  background: rgb(200, 200, 200);
-  -webkit-animation: slide 1.9s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide 1.9s forwards;
-}
-@-webkit-keyframes slide {
-    100% { left: 0; }
-}
-
-@keyframes slide {
-    100% { left: 0; }
-}
 
 .background {
 	position: absolute;
-	background-color: green;
-	width: 1280px;
+	background-color: #649696;
+  margin: 0;
+  padding: 0;
 	height: 100%;
 }
 
 .responsive-image {
-	width:60%;
+	width:100%;
 }
 
-.project-footer {
-	text-align: center;
-	background-color: #999;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: -20px;
+  height: 80px;
+  clear: both;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #999;
+  width: 100%;
+  margin-left: -15px;
 }
 
 

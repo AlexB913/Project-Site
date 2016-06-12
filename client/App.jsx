@@ -37,4 +37,14 @@ $(function(){
     default:
   // do nothing
   }
+
+  // Fancy Console Message For Developers
+console.log("=================================")
+console.log("======H==E==L==L=O===============")
+console.log("=================================")
+console.log("=================================")
+console.log("=================================")
+console.log("=================================")
+
+
 });

@@ -92,7 +92,7 @@ var app = {
       return path.join("");
     }
 
-    d3.timer(function() {w
+    d3.timer(function() {
       var angle = (Date.now() - start) * speed,
           transform = function(d) { return "rotate(" + angle / d.radius + ")"; };
       frame.selectAll("path").attr("transform", transform);

@@ -5,8 +5,7 @@ import main from 'templates/projectMain.html';
 var app = {  
 
   init: function(){
-    $('menu').append(navbar);
-    $('projectMain').append(main);
+    app.render();
   },
   render: function(){
     $('menu').append(navbar);
@@ -15,4 +14,3 @@ var app = {
 };
 
 module.exports = app;
-

@@ -2,10 +2,7 @@
   <div class="col-sm-1">
     <input type="checkbox" {{#if completed}}checked{{/if}}>
   </div>
-  <div class="col-sm-10 title">{{title}}</div>
-  <div class="col-sm-10 title-edit hidden">
-    <input type="text" class="form-control" value="{{title}}" data-id="{{id}}"></input>
-  </div>
+  <div class="col-sm-10 title" data-id="{{id}}">{{title}}</div>
   <div class="col-sm-1">
     <button type="button" class="close" aria-label="Close">
       <span aria-hidden="true">&times;</span>
