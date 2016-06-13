@@ -112,12 +112,12 @@
 	   }
 	
 	   // Fancy Console Message For Developers
-	   console.log("=================================");
-	   console.log("======H==E==L==L=O===============");
-	   console.log("=================================");
-	   console.log("=================================");
-	   console.log("=================================");
-	   console.log("=================================");
+	   console.log("=======================================");
+	   console.log("======WELCOME TO MY PROJECT PAGE!======");
+	   console.log("=======================================");
+	   console.log("=======================================");
+	   console.log("=======================================");
+	   console.log("=======================================");
 	});
 
 /***/ },
@@ -9973,7 +9973,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"todo-container":"todo-container","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","title":"title","background":"background","responsive-image":"responsive-image","footer":"footer","extra-title":"extra-title","extra-body":"extra-body","sun":"sun","planet":"planet","annulus":"annulus","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","soc-icon":"soc-icon","menu-item":"menu-item","menu-box-inner":"menu-box-inner","menu-box":"menu-box","main-content":"main-content"};
+	module.exports = {"todo-container":"todo-container","add-todo-container":"add-todo-container","col-md-10":"col-md-10","col-md-2":"col-md-2","title":"title","background":"background","responsive-image":"responsive-image","footer":"footer","extra-title":"extra-title","extra-body":"extra-body","sun":"sun","planet":"planet","annulus":"annulus","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","soc-icon":"soc-icon","menu-item":"menu-item","menu-box-inner":"menu-box-inner","menu-box":"menu-box","region":"region","main-content":"main-content"};
 
 /***/ },
 /* 3 */,
@@ -19320,6 +19320,22 @@
 	
 	var _templatesProjectMainHtml2 = _interopRequireDefault(_templatesProjectMainHtml);
 	
+	var _templatesProjectAboutHtml = __webpack_require__(66);
+	
+	var _templatesProjectAboutHtml2 = _interopRequireDefault(_templatesProjectAboutHtml);
+	
+	var _templatesProjectWorkHtml = __webpack_require__(67);
+	
+	var _templatesProjectWorkHtml2 = _interopRequireDefault(_templatesProjectWorkHtml);
+	
+	var _templatesProjectContactHtml = __webpack_require__(68);
+	
+	var _templatesProjectContactHtml2 = _interopRequireDefault(_templatesProjectContactHtml);
+	
+	var _templatesProjectRegionHtml = __webpack_require__(69);
+	
+	var _templatesProjectRegionHtml2 = _interopRequireDefault(_templatesProjectRegionHtml);
+	
 	var app = {
 	
 	  init: function init() {
@@ -19328,6 +19344,40 @@
 	  render: function render() {
 	    (0, _jquery2['default'])('menu').append(_templatesProjectNavbarHtml2['default']);
 	    (0, _jquery2['default'])('projectMain').append(_templatesProjectMainHtml2['default']);
+	    app.unbindEvents();
+	    app.bindEvents();
+	  },
+	  bindEvents: function bindEvents() {
+	    app.displayAbout();
+	    app.displayWork();
+	    app.displayContact();
+	    app.displayRegion();
+	  },
+	  unbindEvents: function unbindEvents() {
+	    (0, _jquery2['default'])('.about').off;
+	    (0, _jquery2['default'])('.work').off;
+	    (0, _jquery2['default'])('.contact').off;
+	    (0, _jquery2['default'])('.region').off;
+	  },
+	  displayAbout: function displayAbout() {
+	    (0, _jquery2['default'])('.about').on('click', function () {
+	      (0, _jquery2['default'])('projectMain').replaceWith(_templatesProjectAboutHtml2['default']);
+	    });
+	  },
+	  displayWork: function displayWork() {
+	    (0, _jquery2['default'])('.work').on('click', function () {
+	      (0, _jquery2['default'])('projectMain').replaceWith(_templatesProjectWorkHtml2['default']);
+	    });
+	  },
+	  displayContact: function displayContact() {
+	    (0, _jquery2['default'])('.contact').on('click', function () {
+	      (0, _jquery2['default'])('projectMain').replaceWith(_templatesProjectContactHtml2['default']);
+	    });
+	  },
+	  displayRegion: function displayRegion() {
+	    (0, _jquery2['default'])('.region').on('click', function () {
+	      (0, _jquery2['default'])('projectMain').replaceWith(_templatesProjectRegionHtml2['default']);
+	    });
 	  }
 	};
 	
@@ -19343,7 +19393,7 @@
 /* 56 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"row\">\n  <div class=\"main-content\">\n    <div class=\"col-sm-6\">\n      <img src=\"https://ia600308.us.archive.org/8/items/mma_a_wooded_river_landscape_with_a_church_and_figures_625241/625241.jpg\" class=\"responsive-image\">\n    </div>\n    <div class=\"col-sm-6\">\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis fringilla nunc, id mollis lorem dignissim eleifend. Pellentesque molestie imperdiet pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum a elementum libero. Fusce at porta leo, non vulputate lorem. Nulla eu ante lacus. Proin vestibulum, dui et porttitor sollicitudin, enim turpis gravida felis, mollis eleifend turpis orci ac metus.\n    </div>\n  </div>\n</div>";
+	module.exports = "<div class=\"row\">\n  <div class=\"main-content\">\n    <div class=\"col-sm-6\">\n      <img src=\"https://ia600308.us.archive.org/8/items/mma_a_wooded_river_landscape_with_a_church_and_figures_625241/625241.jpg\" class=\"responsive-image\">\n    </div>\n    <div class=\"col-sm-6\">\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis fringilla nunc, id mollis lorem dignissim eleifend. Pellentesque molestie imperdiet pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum a elementum libero. Fusce at porta leo, non vulputate lorem. Nulla eu ante lacus. Proin vestibulum, dui et porttitor sollicitudin, enim turpis gravida felis, mollis eleifend turpis orci ac metus.\n    </div>\n  </div>\n</div> ";
 
 /***/ },
 /* 57 */
@@ -29108,6 +29158,30 @@
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"col-sm-12\">\n\t<img src=\"/images/social-media.png\" alt=\"Facebook\">\n\t<img src=\"/images/linkedin.png\" alt=\"Linkedin\">\n\t<img src=\"/images/twitter.png\" alt=\"Twitter\">\n</div>\n\n<!-- Icon made by Freepik from www.flaticon.com -->";
+
+/***/ },
+/* 66 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"row\">\n  <div class=\"main-content\">\n    <div class=\"col-sm-6\">\n      <img src=\"https://ia600308.us.archive.org/8/items/mma_a_wooded_river_landscape_with_a_church_and_figures_625241/625241.jpg\" class=\"responsive-image\">\n    </div>\n    <div class=\"col-sm-6\">\n\t\tLeo scelerisque in, mollis mauris bibendum, tristique repellat, pretium hendrerit est eget sed, mauris in mollis volutpat dui non. Tincidunt metus ornare, facilisi commodo risus ante, tortor ac. Eros feugiat nulla donec id tellus, eget cursus aenean orci, sit eu nec enim, faucibus consequat iste. Non proin nonummy pellentesque pede donec. Libero ligula odio sit scelerisque, venenatis iaculis, suscipit tellus. Ut nam enim tellus, at id. Duis ligula ut convallis aliquam fermentum, imperdiet sapien suspendisse. Ac nullam. Blandit ultrices mus, vestibulum interdum consequat volutpat nisl rutrum nam. Mauris vel vitae sed ipsum tempor vehicula. Vel a suspendisse porttitor, quis in nulla non turpis, nunc lectus elit sed integer.\n\n    </div>\n  </div>\n</div>";
+
+/***/ },
+/* 67 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"row\">\n  <div class=\"main-content\">\n    <div class=\"col-sm-6\">\n      <img src=\"https://ia600308.us.archive.org/8/items/mma_a_wooded_river_landscape_with_a_church_and_figures_625241/625241.jpg\" class=\"responsive-image\">\n    </div>\n    <div class=\"col-sm-6\">\n\t\tCras mauris rutrum pharetra leo mi potenti, dapibus ac suspendisse placerat sit aliquam ipsum. Tempus ut ultricies nam pretium varius adipiscing, at tempor senectus eget sed id, pellentesque vitae. Egestas sit vehicula sociis, mauris etiam risus volutpat, pharetra libero nunc mauris. Sed vivamus pulvinar amet suspendisse consectetuer. Mauris ipsum aliquam feugiat. Viverra at integer, mauris erat justo. Ultrices velit ipsum vivamus auctor nonummy pariatur, vitae eleifend id dis amet et. Eu aliquet, esse elementum suspendisse. Ante sit, in sociosqu at orci.\n\n    </div>\n  </div>\n</div>";
+
+/***/ },
+/* 68 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"row\">\n  <div class=\"main-content\">\n    <div class=\"col-sm-6\">\n      <img src=\"https://ia600308.us.archive.org/8/items/mma_a_wooded_river_landscape_with_a_church_and_figures_625241/625241.jpg\" class=\"responsive-image\">\n    </div>\n    <div class=\"col-sm-6\">\n\t\tMaecenas sed arcu a lobortis, proin sapien ultricies consequatur tortor, aliquam porttitor non at justo sed non, massa at. Justo integer auctor, in sociis sed turpis magna elit curae, sit integer turpis sit, id volutpat nec massa, vivamus duis. Quam ut, non ipsum. Dicta quam, integer vitae accumsan urna et ante. Vestibulum condimentum, morbi dolor, elementum posuere eget nunc sed, egestas vitae sed dolore aliquam, ante lacus vestibulum.s\n    </div>\n  </div>\n</div>";
+
+/***/ },
+/* 69 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"row\">\n  <div class=\"main-content\">\n    <div class=\"col-sm-6\">\n      <img src=\"https://ia600308.us.archive.org/8/items/mma_a_wooded_river_landscape_with_a_church_and_figures_625241/625241.jpg\" class=\"responsive-image\">\n    </div>\n    <div class=\"col-sm-6\">\n\t\tIn aptent nibh consectetuer duis ut est. Dictum justo sed donec nec, erat ut gravida est purus aliquet quis, velit molestie tellus mauris ac natoque, dolor ut nulla et cursus etiam. Integer iaculis vel nec ut egestas, et nam praesent sed ut lorem, facilisis molestie sodales netus nostra mi tellus. Ligula porttitor adipiscing nec etiam lacus, libero in, enim odio imperdiet nunc vehicula velit lobortis. Primis orci et proin malesuada, pede nisl in erat condimentum, adipiscing a erat risus eget aenean, semper consequat penatibus. Nullam purus mauris duis nonummy.\n\n    </div>\n  </div>\n</div>";
 
 /***/ }
 /******/ ]);

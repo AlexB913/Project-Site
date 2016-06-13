@@ -178,6 +178,33 @@ h1 {
   height: 100px;
 }
 
+@media screen and (max-width: 550px) {
+  .menu-box-inner {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    z-index: -2;
+  }
+}
+
+@media screen and (max-width: 730px) and (min-width: 570px) {
+  .region {
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    margin: 10px;
+    right: 10px;
+    text-align: center;
+    color: black;
+    width: 150px;
+    border: 1px solid #EEE;
+  }
+}
+
 .main-content {
   background-color: #649696;
   overflow: hidden;
