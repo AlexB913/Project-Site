@@ -14,8 +14,8 @@ var app = {
   render: function(){
     $('menu').append(navbar);
     $('projectMain').append(main);
-    app.unbindEvents()
-    app.bindEvents()
+    app.unbindEvents();
+    app.bindEvents();
   },
   bindEvents: function(){
     app.displayAbout();
@@ -24,30 +24,30 @@ var app = {
     app.displayRegion();
   },
   unbindEvents: function(){
-    $('.about').off;
-    $('.work').off;
-    $('.contact').off;
-    $('.region').off;
+    $('.about').off();
+    $('.work').off();
+    $('.contact').off();
+    $('.region').off();
   },
   displayAbout: function(){
-  	$('.about').on('click', function(){
-  	$('projectMain').replaceWith(about);
-  	});
+    $('.about').on('click', function(){
+      $('projectMain').replaceWith(about);
+    });
   },
   displayWork: function(){
-  	$('.work').on('click', function(){
-  	$('projectMain').replaceWith(work);
-  	});
+    $('.work').on('click', function(){
+      $('projectMain').replaceWith(work);
+    });
   },
   displayContact: function(){
-  	$('.contact').on('click', function(){
-  	$('projectMain').replaceWith(contact);
-  	});
+    $('.contact').on('click', function(){
+      $('projectMain').replaceWith(contact);
+    });
   },
   displayRegion: function(){
-  	$('.region').on('click', function(){
-  	$('projectMain').replaceWith(region);
-  	});
+    $('.region').on('click', function(){
+      $('projectMain').replaceWith(region);
+    });
   }
 };
 

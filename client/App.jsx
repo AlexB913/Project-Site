@@ -1,7 +1,7 @@
 
 import $ from 'jquery';
 import 'styles/main.scss';
-import todos from 'pages/todo';
+import todos from 'pages/todo-backbone';
 import project from 'pages/project';
 import extra from 'pages/extra';
 import funnySquares from 'pages/funnySquares';
@@ -21,7 +21,7 @@ $(function(){
 
   switch (url){
     case '/pages/todo.html':
-	todos.init();
+	todos.render();
 	break;
     case '/pages/project.html':
 	project.init();

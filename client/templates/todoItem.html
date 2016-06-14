@@ -1,11 +1,16 @@
-<li class="list-group-item row {{#if completed}}disabled{{/if}}">
-  <div class="col-sm-1">
-    <input type="checkbox" {{#if completed}}checked{{/if}}>
-  </div>
-  <div class="col-sm-10 title" data-id="{{id}}">{{title}}</div>
-  <div class="col-sm-1">
-    <button type="button" class="close" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-</li>
+<div class="col-sm-1">
+  {{#if completed}}
+    <input class="completed-checkbox" type="checkbox" checked>
+  {{else}}
+    <input class="completed-checkbox" type="checkbox">
+  {{/if}}
+</div>
+<div class="col-sm-10 title">{{title}}</div>
+<div class="col-sm-10 title-edit hidden">
+  <input type="text" class="form-control title-edit-input" value="{{title}}">
+</div>
+<div class="col-sm-1">
+  <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

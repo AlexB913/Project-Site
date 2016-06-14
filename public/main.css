@@ -43,6 +43,7 @@
 .footer {
   position: fixed;
   bottom: 0;
+  opacity: .9;
   margin-top: -20px;
   height: 80px;
   clear: both;
@@ -170,6 +171,7 @@ h1 {
   padding: 10px;
   height: 50px;
   background-color: #c8c8c8;
+  border: 1px solid white;
 }
 
 .menu-box {
