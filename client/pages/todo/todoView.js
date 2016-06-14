@@ -1,21 +1,13 @@
 var $ = require('jquery');
-
-// legacy loading for bootstrap
-window.jQuery = window.$ = $;
-require('bootstrap');
-
-import _ from 'underscore';
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import todoItemTemplate from 'templates/todoItem.html';
-import TodoControllerView from 'pages/todo/todoController';
 
-
-
+// Item View
 
 var TodoItemView = Backbone.View.extend({
   tagName: 'li', // el = <li class="list-group-item"></li>
-  className: 'list-group-item row', 
+  className: 'list-group-item row',
   events: {
     'click .close': 'removeItem',
     'change .completed-checkbox': 'completedClicked',
@@ -23,8 +15,8 @@ var TodoItemView = Backbone.View.extend({
     'keypress .title-edit-input': 'titleEditConfirm'
   },
   template: Handlebars.compile(todoItemTemplate),
-  initialize: function(todo){
-  	this.controller = TodoControllerView;
+  initialize: function(todo, controller){
+  	this.controller = controller;
     this.data = todo;
     this.render();
   },

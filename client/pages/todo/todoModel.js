@@ -1,17 +1,9 @@
 var $ = require('jquery');
-
-// legacy loading for bootstrap
-window.jQuery = window.$ = $;
-require('bootstrap');
-
 import _ from 'underscore';
 import Backbone from 'backbone';
-import Handlebars from 'handlebars';
 import lscache from 'lscache';
-import todoItemTemplate from 'templates/todoItem.html';
 
 // Model
-
 
 var TodoModel = Backbone.Model.extend({
   defaults: {
@@ -50,6 +42,7 @@ var TodoModel = Backbone.Model.extend({
     this.save();
   },
   removeItem: function(id){
+    // finally actually remove the damn thing
     var todos = this.get('todos');
     todos.splice(id, 1);
     this.save();

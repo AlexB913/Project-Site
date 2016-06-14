@@ -6,6 +6,7 @@ import project from 'pages/project';
 import extra from 'pages/extra';
 import funnySquares from 'pages/funnySquares';
 import threeExample from 'pages/3dsExample';
+import photoSearch from 'pages/photoSearch';
 import header from 'components/header';
 import footer from 'components/footer';
 
@@ -34,6 +35,10 @@ $(function(){
 	break;
     case '/pages/3dsExample.html':
   threeExample.init();
+  break;
+    case '/pages/photoSearch.html':
+    photoSearch.init();
+  break;
     default:
   // do nothing
   }

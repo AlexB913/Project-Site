@@ -1,15 +1,8 @@
 var $ = require('jquery');
-
-// legacy loading for bootstrap
-window.jQuery = window.$ = $;
-require('bootstrap');
-
-import _ from 'underscore';
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import todoModel from 'pages/todo/todoModel';
 import TodoItemView from 'pages/todo/todoView';
-
 
 // Controller View
 
@@ -21,11 +14,12 @@ var TodoControllerView = Backbone.View.extend({
   },
   initialize: function(){
     this.model.fetch();
+    this.render();
   },
   render: function(){
     // render the todo items
     var todos = this.model.get('todos');
-    var $ul = this.$el.find('ul');
+    var $ul = this.$el.find('.list-group');
     $ul.html('');
     var controller = this;
     todos.map(function(todo){

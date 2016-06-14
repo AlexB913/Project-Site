@@ -13,7 +13,7 @@ var app = {
   },
   render: function(){
     $('menu').append(navbar);
-    $('projectMain').append(main);
+    $('.project-main').append(main);
     app.unbindEvents();
     app.bindEvents();
   },
@@ -31,22 +31,22 @@ var app = {
   },
   displayAbout: function(){
     $('.about').on('click', function(){
-      $('projectMain').replaceWith(about);
+      $('.project-main').html(about);
     });
   },
   displayWork: function(){
     $('.work').on('click', function(){
-      $('projectMain').replaceWith(work);
+      $('.project-main').html(work);
     });
   },
   displayContact: function(){
     $('.contact').on('click', function(){
-      $('projectMain').replaceWith(contact);
+      $('.project-main').html(contact);
     });
   },
   displayRegion: function(){
     $('.region').on('click', function(){
-      $('projectMain').replaceWith(region);
+      $('.project-main').html(region);
     });
   }
 };
