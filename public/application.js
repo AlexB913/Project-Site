@@ -28671,6 +28671,16 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _templatesFlickrImageHtml = __webpack_require__(60);
+	
+	var _templatesFlickrImageHtml2 = _interopRequireDefault(_templatesFlickrImageHtml);
+	
+	var _handlebars = __webpack_require__(9);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var compiledTemplate = _handlebars2['default'].compile(_templatesFlickrImageHtml2['default']);
+	
 	var app = {
 	  init: function init() {
 	    app.render();
@@ -28697,7 +28707,7 @@
 	        method: 'flickr.photos.search',
 	        api_key: '731717db25329eb6aa65703cb6b71970',
 	        format: 'json',
-	        per_page: 3
+	        per_page: 50
 	      },
 	      complete: function complete(response) {
 	        var text = response.responseText;
@@ -28709,7 +28719,13 @@
 	  },
 	  renderResults: function renderResults(data) {
 	    // pass data to the template
+	    var html = '';
+	    var myPhotos = data.photos.photo;
+	    myPhotos.forEach(function (item) {
+	      html += compiledTemplate(item);
+	    });
 	    // append result to the .search-result div
+	    (0, _jquery2['default'])('.search-results').html(html);
 	  }
 	};
 	
@@ -28780,6 +28796,12 @@
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"col-sm-12\">\n\t<img src=\"/images/social-media.png\" alt=\"Facebook\">\n\t<img src=\"/images/linkedin.png\" alt=\"Linkedin\">\n\t<img src=\"/images/twitter.png\" alt=\"Twitter\">\n\t<a href=\"#top\">Back to top of page</a>\n</div>\n\n<!-- Icon made by Freepik from www.flaticon.com -->";
+
+/***/ },
+/* 60 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"photo\">\n\t<img src=\"http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}_b.jpg\">\n</div>";
 
 /***/ }
 /******/ ]);

@@ -1,4 +1,8 @@
 import $ from 'jquery';
+import photoTemplate from 'templates/flickrImage.html';
+import Handlebars from 'handlebars';
+
+var compiledTemplate = Handlebars.compile(photoTemplate);
 
 var app = {
     init: function(){
@@ -26,7 +30,7 @@ var app = {
           method: 'flickr.photos.search',
           api_key: '731717db25329eb6aa65703cb6b71970',
           format: 'json',
-          per_page: 3
+          per_page: 50
         },
         complete: function(response){
           var text = response.responseText;
@@ -38,7 +42,13 @@ var app = {
     },
     renderResults: function(data){
       // pass data to the template
+      var html = '';
+      var myPhotos = data.photos.photo;
+      myPhotos.forEach(function(item){
+        html += compiledTemplate(item);
+      });
       // append result to the .search-result div
+      $('.search-results').html(html);
     }
 };
 
