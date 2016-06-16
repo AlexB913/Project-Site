@@ -29,6 +29,7 @@ var app = {
     $('.contact').off();
     $('.region').off();
   },
+  
   displayAbout: function(){
     $('.about').on('click', function(){
       $('.project-main').html(about);

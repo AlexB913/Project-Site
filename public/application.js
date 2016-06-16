@@ -10021,7 +10021,7 @@
 	  },
 	  initialize: function initialize() {
 	    this.model.fetch();
-	    this.render();
+	    this.model.on('change', this.render, this);
 	  },
 	  render: function render() {
 	    // render the todo items
@@ -18360,14 +18360,22 @@
 	    completed: false
 	  },
 	  fetch: function fetch() {
-	    var data = _lscache2['default'].get('elephant');
-	    data = this.applySchema(data);
-	    this.set('todos', data);
+	    var that = this;
+	    $.ajax({
+	      url: '/api',
+	      method: 'GET',
+	      complete: function complete(response) {
+	        var dataString = response.responseText;
+	        var data = JSON.parse(dataString);
+	        data = that.applySchema(data);
+	        that.set('todos', data);
+	      }
+	    });
 	  },
 	  save: function save() {
-	    var data = this.get('todos');
-	    data = this.applySchema(data);
-	    _lscache2['default'].set('elephant', data);
+	    //  var data = this.get('todos');
+	    //  data = this.applySchema(data);
+	    //  lscache.set('elephant', data);
 	  },
 	  applySchema: function applySchema(todos) {
 	    var data = todos;
@@ -18901,6 +18909,7 @@
 	    (0, _jquery2['default'])('.contact').off();
 	    (0, _jquery2['default'])('.region').off();
 	  },
+	
 	  displayAbout: function displayAbout() {
 	    (0, _jquery2['default'])('.about').on('click', function () {
 	      (0, _jquery2['default'])('.project-main').html(_templatesProjectAboutHtml2['default']);
