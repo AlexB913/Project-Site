@@ -30,7 +30,7 @@ var app = {
           method: 'flickr.photos.search',
           api_key: '731717db25329eb6aa65703cb6b71970',
           format: 'json',
-          per_page: 50
+          per_page: 10
         },
         complete: function(response){
           var text = response.responseText;
